@@ -1,0 +1,11 @@
+@import "src/styles/index";
+
+.stack__container {
+    border: $border-color 2px solid;
+    border-radius: 5px;
+    .stack__languages {
+        img {
+            background-color: $background;
+        }
+    }
+}
