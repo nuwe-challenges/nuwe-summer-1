@@ -2,28 +2,8 @@ import { createSelector } from 'reselect'
 import { defaultUser } from '../../constants'
 import actionTypes from '../actions/actionTypes';
 import { RootState } from '.'
+import userType from '../../types/userInterface';
 import { AnyAction } from "redux";
-
-interface userType {
-    name: string;
-    mail: string;
-    phone: string;
-    position: string;
-    location: string;
-    description: string;
-    github: string;
-    linkedin: string;
-    jobLocation: string;
-    jobDesc: string;
-    jobSalary: {
-        min: number;
-        max: number;
-    };
-    jobTravel: boolean;
-    jobRemote: boolean;
-    jobWhen: string;
-    stack: string[]
-}
 
 const initialState = {
     user: defaultUser
