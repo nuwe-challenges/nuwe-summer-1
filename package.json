@@ -15,6 +15,7 @@
     "redux": "^4.1.0",
     "redux-immutable-state-invariant": "^2.1.0",
     "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "sass": "^1.32.11",
     "styled-components": "^5.3.0",
     "svg-to-jsx": "^1.0.3",
