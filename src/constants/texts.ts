@@ -1,6 +1,9 @@
 export default {
     searching: {
-        title: 'Sobre el puesto que busca'
+        title: 'Sobre el puesto que busca',
+        remote: { true: 'Disponibilidad para trabajar en remoto',
+         false:'Trabajo en presencial' },
+         viajar: 'Disponibilidad para viajar'
     },
     perfil: {
         tabs: {
@@ -17,6 +20,6 @@ export default {
         teamwork: 'Teamwork',
         comunicacion: 'Comunicación',
         problemas:'Resolución de problemas', 
-        other: 'Lo que sea'
-    }
+        other: 'Lo que sea',
+    },
 }
