@@ -2,8 +2,13 @@ import React from 'react'
 import { texts } from '../../constants'
 import './index.scss'
 import * as icon from '../../assets/icons'
+import { useSelector } from 'react-redux';
+import { getUser } from '../../redux/reducers/user.reducer';
 
-const Searching = ({ user }) : JSX.Element => (
+const Searching = () : JSX.Element => {
+    const user = useSelector(getUser)
+
+    return(
     <section className="searching__container">
         <h2>{texts.searching.title} {user.name}:</h2>
         <div className="searching__main">
@@ -17,6 +22,6 @@ const Searching = ({ user }) : JSX.Element => (
             <p className="searching__when"><img src={icon.Work} alt=''/> {user.jobWhen}</p>
         </div>
     </section>
-)
+)}
 
 export default Searching;
