@@ -1,6 +1,8 @@
 @import "src/styles/index.scss";
 
 .user__container {
+    @include flex(column, center, center);
+    text-align: center;
     .user__background {
         .empty-avatar {
             width: 100px;
@@ -9,9 +11,25 @@
             background-color: $primary;
         }
         @include flex(row, center, flex-end);
+        width: 100%;
         background-image: url("/assets/images/background.png");
         min-height: 130px;
         background-size: contain;
         background-repeat: no-repeat;
+    }
+    .user__location {
+        p {
+            @include flex(row, center, center);
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+    .user__social {
+        @include flex(row, center, center);
+        img {
+            height: 30px;
+            margin: 0 5px;
+        }
     }
 }

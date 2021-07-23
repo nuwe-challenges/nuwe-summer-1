@@ -3,9 +3,15 @@
 .stack__container {
     border: $border-color 2px solid;
     border-radius: 5px;
+    legend {
+        font-size: 15px;
+        font-weight: 500;
+    }
     .stack__languages {
         img {
             background-color: $background;
+            padding: 8px 24px;
+            margin: 5px;
         }
     }
 }
