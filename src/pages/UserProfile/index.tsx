@@ -1,19 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
+import { getUser } from '../../redux/reducers/user.reducer';
 import { GithubWhite, LinkedinWhite } from '../../assets'
 import UserStack from '../../components/UserStack'
 import './index.scss'
-const userDefault= {
-    name: 'JohnD',
-    mail: 'random@gmail.com',
-    phone: '+34 666 666 666',
-    position: 'Web dev - Especialista',
-    location:'Palafolls, España',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan urna nec ipsum tempus, vitae consequat velit rhoncus. Nunc quis dolor urna. Curabitur in orci congue, pellentesque massa ullamcorper, volutpat odio. Proin eget nulla odio.',
-    github: '',
-    linkedin:''
-}
 
-const UserProfile = ({ user=userDefault }): JSX.Element => (
+const UserProfile = (): JSX.Element => {
+    const user = useSelector(getUser)
+    return (
     <section className="user__container">
         <div className="user__background">
             <div className="empty-avatar"></div>
@@ -30,6 +24,6 @@ const UserProfile = ({ user=userDefault }): JSX.Element => (
         </div>
         <UserStack/>
     </section>
-)
+)}
 
 export default UserProfile;
