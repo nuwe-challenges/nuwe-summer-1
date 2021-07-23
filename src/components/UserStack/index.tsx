@@ -1,25 +1,25 @@
 import React from 'react'
-import { javascript } from '../../assets/icons/stack'
+import { useSelector } from 'react-redux';
+import { getUser } from '../../redux/reducers/user.reducer';
+import * as logo from '../../assets/icons/stack'
 import './index.scss'
 
-const stackDefault=['javascript','javascript','javascript','javascript']
-const logos = {
-    javascript,
-}
-type props = { stack?: string[] }
+type mapType = keyof typeof logo
 
-const UserStack = ({ stack=stackDefault }: props): JSX.Element => (
+const UserStack = (): JSX.Element => {
+    const user = useSelector(getUser)
+    return (
     <fieldset className='stack__container'>
         <legend>Stack</legend>
         <div className="stack__languages">
-            {stack && stack.map(el=>
+            {user?.stack && user.stack.map((el: mapType) =>
             <img 
                 key='el' 
-                src={ logos.javascript }
+                src={logo[el]}
                 alt=''
             />)}
         </div>
     </fieldset>
-)
+)}
 
 export default UserStack;
