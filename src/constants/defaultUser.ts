@@ -15,5 +15,6 @@ export default {
     },
     jobTravel: true, 
     jobRemote: true,
-    jobWhen: 'Incorporación inmediata'
+    jobWhen: 'Incorporación inmediata',
+    stack: ['javascript','html','css','react','redux']
 }
