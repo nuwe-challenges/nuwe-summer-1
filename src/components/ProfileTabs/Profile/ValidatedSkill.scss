@@ -1,0 +1,15 @@
+@import "src/styles/index";
+.validated-skills {
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  div {
+    display: flex;
+    flex-direction: column;
+    background-color: $background;
+    padding: 14px 10px;
+    margin: 5px;
+  }
+  span {
+    margin: 1px 0;
+  }
+}

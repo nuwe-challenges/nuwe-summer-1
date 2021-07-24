@@ -1,0 +1,19 @@
+@import "src/styles/index";
+
+.profilenuwe__container {
+  padding: 10px;
+  h2 {
+    margin: 5px;
+  }
+  h3 {
+    font-weight: 500;
+  }
+  .profile__hard,
+  .profile__soft {
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1px solid $border-color;
+    text-align: center;
+    padding: 5px;
+  }
+}
