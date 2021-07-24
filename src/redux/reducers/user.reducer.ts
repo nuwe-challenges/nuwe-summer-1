@@ -6,22 +6,22 @@ import userType from '../../types/userInterface';
 import { AnyAction } from "redux";
 
 const initialState = {
-    user: defaultUser
+  user: defaultUser
 };
 
 export const loadUser = (user: userType) => ({
-    type: actionTypes.LOAD_USER,
-    payload: user
+  type: actionTypes.LOAD_USER,
+  payload: user
 })
 
 const getState = (state: RootState) => state.user
-export const getUser = createSelector([ getState ], (s) => s.user)
+export const getUser = createSelector([getState], (s) => s.user)
 
 export default (state = initialState, action: AnyAction = { type: '' }) => {
-  switch (action.type) {
-    case actionTypes.LOAD_USER:
-      return { ...state, user: action.payload };
-    default:
-      return state;
+  if (action.type === actionTypes.LOAD_USER) {
+    return { ...state, user: action.payload };
+  }
+  else {
+    return state
   }
 };
