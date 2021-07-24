@@ -1,16 +1,18 @@
 @import "src/styles/index";
 
-nav {
-    @include flex(row, space-between, center);
-    height: 60px;
-    .navbar__logo {
-        @include flex(row, space-around, center);
-        img {
-            margin-right: 10px;
-            height: 50px;
-            &:nth-child(2) {
-                height: 45px;
-            }
-        }
+.navbar__logo {
+  @include flex(row, space-around, center);
+  img {
+    margin-right: 10px;
+    height: 50px;
+    &:nth-child(2) {
+      height: 45px;
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .navbar__burger {
+    display: none;
+  }
 }
