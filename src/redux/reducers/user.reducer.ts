@@ -17,7 +17,7 @@ export const loadUser = (user: userType) => ({
 const getState = (state: RootState) => state.user
 export const getUser = createSelector([ getState ], (s) => s.user)
 
-export default (state = initialState, action: AnyAction) => {
+export default (state = initialState, action: AnyAction = { type: '' }) => {
   switch (action.type) {
     case actionTypes.LOAD_USER:
       return { ...state, user: action.payload };

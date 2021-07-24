@@ -14,11 +14,11 @@ export const menuOpen = () => ({
 const getState = (state: RootState) => state.menu;
 export const getMenu = createSelector([getState], (s) => s.open);
 
-export default (state = initialState, action: AnyAction) => {
-  switch (action.type) {
-    case actionTypes.MENU_OPEN:
-      return { ...state, open: !state.open };
-    default:
-      return state;
+export default (state = initialState, action: AnyAction = { type: '' }) => {
+  if (action.type === actionTypes.MENU_OPEN) {
+    return { ...state, open: !state.open }
   }
-};
+  else {
+    return state
+  }
+}

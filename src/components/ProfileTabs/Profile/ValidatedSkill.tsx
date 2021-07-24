@@ -10,7 +10,7 @@ type props = {
   }[];
 };
 
-const ValidatedSkills = ({ stack }: props): JSX.Element => (
+const ValidatedSkill = ({ stack }: props): JSX.Element => (
   <div className="validated-skills">
     {stack &&
       stack.map((el, index) => (
@@ -23,4 +23,4 @@ const ValidatedSkills = ({ stack }: props): JSX.Element => (
   </div>
 );
 
-export default ValidatedSkills;
+export default ValidatedSkill;

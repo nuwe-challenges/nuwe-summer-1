@@ -1,8 +1,7 @@
 import React from "react";
-import { GithubWhite, LinkedinWhite } from "../../assets/icons";
+import { GithubWhite, LinkedinWhite, Location } from "../../assets/icons";
 import userType from "../../types/userInterface";
 import "./index.scss";
-import { Location } from "../../assets/icons";
 
 type props = {
   user: userType;
