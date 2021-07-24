@@ -24,13 +24,82 @@ src/
 ```
 ## Live preview 📳
 
-[Click here to go to the deployed site](https://judith-mwc.netlify.app/)
+[Click here to go to the deployed site](https://nuwe-summer1.netlify.app)
+
+## Sonar report ☀
+
+<img src="https://github.com/judithmg/nuwe-summer-1/blob/main/public/images/sonar.png?raw=true"/>
+
+En caso de querer generar un reporte con sonar-scanner, crea un archivo `sonar-project.properties` con el siguiente código:
+
+```
+# must be unique in a given SonarQube instance
+sonar.projectKey=my:project
+
+# --- optional properties ---
+
+# defaults to project key
+#sonar.projectName=My project
+# defaults to 'not provided'
+#sonar.projectVersion=1.0
+ 
+# Encoding of the source code. Default is default system encoding
+#sonar.sourceEncoding=UTF-8
+```
 
 ## Libraries used 📚
 - **`redux`** para gestionar el estado de la app (usuarios por el momento)
 - **`styled-components`** para crear componentes reutilizables
 - **`@nivo/core`** para crear gráficas
 - **`eslint`** como linter, para analizar el código y solucionar problemas
+
+## More about this project 🤓
+
+- Toda la información sobre el usuario sigue el siguiente modelo:
+
+```
+interface User {
+  name: string;
+  mail: string;
+  phone: string;
+  position: string;
+  location: string;
+  description: string;
+  github: string;
+  linkedin: string;
+  jobLocation: string;
+  jobDesc: string;
+  jobSalary: {
+    min: number;
+    max: number;
+  };
+  jobTravel: boolean;
+  jobRemote: boolean;
+  jobWhen: string;
+  stack: string[];
+  hardSkills: {
+    type: string;
+    points: number;
+  }[];
+  softSkills: {
+    type: string;
+    points: number;
+  }[];
+  otherValidated: {
+    type: mapType;
+    points: number;
+  }[];
+}
+```
+
+Como para esta parte del reto no se requiere de backend, los datos del usuario `default` se encuentran en `src/constants/defaultUser.ts`
+
+- Las constantes de texto se encuentran en `src/constants/text`
+
+Esto facilita el poder cambiar más fácilmente los textos, títulos etc en el proyecto, y en caso de querer añadir traducciones a la web facilitaría el proceso.
+
+- Toda la lógica de `redux` se encuentra en `src/redux`. Se usa el selector `reselect` que permite el fácil manejo de redux, de forma que se guarda el mínimo `state` posible.
+
 
 ## Run this project 🏃‍♀️
 
