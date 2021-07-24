@@ -1,7 +1,7 @@
 import * as logo from "../assets/icons/stack";
 type mapType = keyof typeof logo;
 
-export default interface user {
+export default interface User {
   name: string;
   mail: string;
   phone: string;
