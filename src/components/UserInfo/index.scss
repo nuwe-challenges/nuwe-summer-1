@@ -1,35 +1,43 @@
 @import "src/styles/index.scss";
 
 .user__container {
-    @include flex(column, center, center);
-    text-align: center;
-    .user__background {
-        .empty-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: $primary;
-        }
-        @include flex(row, center, flex-end);
-        width: 100%;
-        background-image: url("/assets/images/background.png");
-        min-height: 130px;
-        background-size: contain;
-        background-repeat: no-repeat;
+  @include flex(column, center, center);
+  text-align: center;
+  .user__background {
+    position: relative;
+    margin-bottom: 50px;
+    .empty-avatar {
+      position: absolute;
+      bottom: -50px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: $primary;
     }
+    @include flex(row, center, flex-end);
+    width: 100%;
+    background-image: url("/assets/images/background.png");
+    min-height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .user__data {
+    padding: 0 20px;
     .user__location {
-        p {
-            @include flex(row, center, center);
-            img {
-                margin-right: 10px;
-            }
-        }
-    }
-    .user__social {
+      p {
         @include flex(row, center, center);
         img {
-            height: 30px;
-            margin: 0 5px;
+          margin-right: 10px;
         }
+      }
     }
+    .user__social {
+      @include flex(row, center, center);
+      img {
+        height: 30px;
+        margin: 0 5px;
+      }
+    }
+  }
 }

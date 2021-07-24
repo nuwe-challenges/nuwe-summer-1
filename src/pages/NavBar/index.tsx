@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.scss";
 import { Burger, NuweLight, NuweLogo, Settings } from "../../assets/icons";
-import { useSelector } from "react-redux";
 import { menuOpen } from "../../redux/reducers/menu.reducer";
 import Button from "./Button";
 

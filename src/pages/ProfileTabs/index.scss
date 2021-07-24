@@ -1,0 +1,29 @@
+@import "src/styles/index";
+
+.tabs__container {
+  text-align: center;
+}
+
+.tabs__header {
+  background-color: $background;
+  ul {
+    padding: 10px 0;
+    display: flex;
+    list-style: none;
+    li {
+      margin: 0 10px;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      color: $secondary;
+      font-size: 16px;
+      font-weight: 400;
+      &.active,
+      &:hover {
+        border-bottom: 2px solid $primary;
+        color: $primary;
+      }
+    }
+  }
+}

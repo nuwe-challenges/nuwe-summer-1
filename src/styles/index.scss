@@ -3,34 +3,57 @@
 @import "./mixins.scss";
 
 * {
-    font-family: $Montserrat;
-    box-sizing: border-box;
+  font-family: $Montserrat;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: $background;
-    font-size: 12px;
-    color: $secondary;
-    margin: 0;
-    padding: 0;
+  background-color: $background;
+  font-size: 12px;
+  color: $secondary;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  @include flex(row, space-between, center);
+  height: 60px;
+  margin: 10px;
 }
 
 h2 {
-    font-size: 20px;
-    font-weight: 500;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 section {
-    background-color: $paper;
-    margin: 1rem;
+  background-color: $paper;
+  margin: 1rem;
+}
+aside {
+  position: absolute;
 }
 
 button {
-    font-weight: normal;
-    font-size: 14px;
+  font-weight: normal;
+  font-size: 14px;
 }
 
 .divider {
-    border-top: 1px solid $border-color;
-    margin: 20px 31px 10px 31px;
+  border-top: 1px solid $border-color;
+  margin: 20px 31px 10px 31px;
+}
+
+@media (min-width: 600px) {
+  #app {
+    display: flex;
+    flex-direction: row;
+  }
+  aside {
+    position: relative;
+  }
+  // nav {
+  //   border-right: 1px solid $border-color;
+  //   height: 100vh;
+  //   align-items: flex-start;
+  // }
 }
