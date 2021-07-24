@@ -24,7 +24,7 @@ src/
 ```
 ## Live preview 📳
 
-[Click here to go to the deployed site](https://judith-mwc.netlify.app/)
+[Click here to go to the deployed site](https://nuwe-summer1.netlify.app)
 
 ## Libraries used 📚
 - **`redux`** para gestionar el estado de la app (usuarios por el momento)
