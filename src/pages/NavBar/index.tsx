@@ -3,11 +3,14 @@ import "./index.scss";
 import { Burger, NuweLight, NuweLogo, Settings } from "../../assets/icons";
 import { menuOpen } from "../../redux/reducers/menu.reducer";
 import Button from "./Button";
+import { useDispatch } from "react-redux";
 
 const NavBar = (): JSX.Element => {
+  const dispatch = useDispatch();
+  const handleClick = () => dispatch(menuOpen());
   return (
     <>
-      <button type="button" onClick={menuOpen()}>
+      <button type="button" onClick={handleClick}>
         <img src={Burger} alt="" className="navbar__burger" />
       </button>
       <div className="navbar__logo">
