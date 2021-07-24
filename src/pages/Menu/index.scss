@@ -11,9 +11,14 @@ aside {
     list-style-type: none;
     padding: 0;
     margin: 10px;
+    img {
+      width: 30px;
+      margin-right: 5px;
+    }
     li {
       margin: 20px 0;
       border-bottom: 1px solid transparent;
+      @include flex(row, flex-start, center);
       &:hover {
         color: $primary;
         font-weight: 500;
