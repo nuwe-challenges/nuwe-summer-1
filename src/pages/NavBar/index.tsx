@@ -10,7 +10,7 @@ const NavBar = (): JSX.Element => {
   const handleClick = () => dispatch(menuOpen());
   return (
     <>
-      <button type="button" onClick={handleClick}>
+      <button type="button" onClick={handleClick} className="navbar__open">
         <img src={Burger} alt="" className="navbar__burger" />
       </button>
       <div className="navbar__logo">

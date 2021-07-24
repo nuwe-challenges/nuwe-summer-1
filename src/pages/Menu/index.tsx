@@ -6,8 +6,8 @@ import { texts } from "../../constants";
 
 const Menu = (): JSX.Element => {
   const menu = useSelector(getMenu);
-  return menu ? (
-    <>
+  return (
+    <div className={`menu ${menu ? "menu-open" : "menu-close"}`}>
       <ul>
         <li>{texts.menu.perfil}</li>
         <li>{texts.menu.panel}</li>
@@ -15,9 +15,7 @@ const Menu = (): JSX.Element => {
         <li>{texts.menu.contacto}</li>
         <li>{texts.menu.cerrar}</li>
       </ul>
-    </>
-  ) : (
-    <></>
+    </div>
   );
 };
 export default Menu;
