@@ -4,9 +4,19 @@ type mapType = keyof typeof logo;
 export default interface User {
   name: string;
   mail: string;
+  avatar: string;
+  userName: string;
+  openToWork: boolean;
+  hackathons: string;
+  proyectoOS: string;
+  challenges: string;
   phone: string;
   position: string;
-  location: string;
+  location: {
+    country: string
+    city: string
+    continent: string
+  };
   description: string;
   github: string;
   linkedin: string;
@@ -32,4 +42,16 @@ export default interface User {
     type: mapType;
     points: number;
   }[];
+  rank: {
+    rankName: string
+    global: number
+    country: number
+    continent: number
+  };
+  participations: {
+    hackathons: number
+    challenges: number
+    proyectoOS: number
+    emblemas: number
+  }
 }
