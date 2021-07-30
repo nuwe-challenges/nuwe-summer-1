@@ -1,11 +1,13 @@
 interface Actions {
   LOAD_USER: string;
-  MENU_OPEN: string;
+  OPEN_MENU: string;
+  OPEN_CROMO: string;
 }
 
 const actionTypes: Actions = {
   LOAD_USER: "LOAD_USER",
-  MENU_OPEN: "MENU_OPEN",
+  OPEN_MENU: "OPEN_MENU",
+  OPEN_CROMO: "OPEN_CROMO",
 };
 
 export default actionTypes;
