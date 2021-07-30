@@ -5,6 +5,7 @@ export default interface User {
   name: string;
   mail: string;
   avatar: string;
+  emblema: string;
   userName: string;
   openToWork: boolean;
   hackathons: string;
