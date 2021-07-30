@@ -1,12 +1,11 @@
-import React from 'react';
 import { useState } from 'react';
 
 interface Hook {
     isShowing: boolean
-    toggle: void
+    toggle: () => void
 }
 
-const useModal = () => {
+const useModal = (): Hook => {
     const [isShowing, setIsShowing] = useState(false);
 
     function toggle() {
