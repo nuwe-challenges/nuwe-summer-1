@@ -1,11 +1,10 @@
 import React from "react";
-import "./styles/index.scss";
+import "./styles/App.scss";
 import NavBar from "./pages/NavBar";
 import Menu from "./pages/Menu";
 import UserProfile from "./pages/UserProfile";
 import Searching from "./components/Searching";
 import ProfileTabs from "./pages/ProfileTabs";
-import Cromo from "./pages/Cromo";
 
 const App = (): JSX.Element => (
   <>
@@ -17,7 +16,6 @@ const App = (): JSX.Element => (
         <Menu />
       </aside>
       <main>
-        <Cromo />
         <UserProfile />
         <Searching />
         <ProfileTabs />

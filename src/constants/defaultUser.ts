@@ -1,9 +1,13 @@
+import avatar from '../assets/images/avatar.png'
+import emblema from '../assets/images/emblema.png'
+
 export default {
   name: 'JohnD',
   mail: 'random@gmail.com',
   phone: '+34 666 666 666',
-  avatar: '',
-  userName: '@something',
+  avatar: avatar,
+  emblema: emblema,
+  userName: 'something',
   openToWork: true,
   hackathons: 'string',
   challenges: 'string',

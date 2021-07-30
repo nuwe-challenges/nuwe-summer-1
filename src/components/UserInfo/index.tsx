@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { GithubWhite, LinkedinWhite, Location } from "../../assets/icons";
+import texts from '../../constants/texts'
+import useModal from '../../hooks/useModal';
 import userType from "../../types/userInterface";
+import Cromo from "../../pages/Cromo";
 import "./index.scss";
+import Button from "../Cromo/Button";
 
 type props = {
   user: userType;
 };
 
 const UserInfo = ({ user }: props): JSX.Element => {
-
-  const [nft, setNft] = useState(false)
-
-  const handleOpen = () => setNft(prop => !prop)
+  const { isShowing, toggle } = useModal();
 
   return (
     <div className="user__container">
@@ -19,7 +20,14 @@ const UserInfo = ({ user }: props): JSX.Element => {
         <div className="empty-avatar"></div>
       </div>
       <div className="user__data">
-        <button type='button' onClick={handleOpen}>VER NFT</button>
+        <Button type='button'
+          onClick={toggle}
+          outline={true}
+        >
+          {texts.userinfo.nft}
+        </Button>
+        <Cromo isShowing={isShowing}
+          hide={toggle} />
         <h2 className="user__basic">{user.name}</h2>
         <p>
           {user.mail} | {user.phone}
