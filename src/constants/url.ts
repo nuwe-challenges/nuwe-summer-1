@@ -1,0 +1,1 @@
+export default 'https://nuwe-summer1.netlify.app/'

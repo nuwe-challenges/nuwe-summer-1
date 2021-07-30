@@ -7,6 +7,9 @@ export default {
     },
     viajar: "Disponibilidad para viajar",
   },
+  userinfo: {
+    nft: 'VER NUWE NFT'
+  },
   perfil: {
     tabs: {
       0: "Perfil Nuwe",
@@ -31,4 +34,14 @@ export default {
     contacto: "Contacto",
     cerrar: "Cerrar sesión",
   },
+  cromo: {
+    hackathons: 'Hackathons',
+    general: 'General',
+    rango: 'rango',
+    participacion: 'Participación de',
+    challenges: 'Challenges',
+    proyectos: 'Proyectos OS',
+    emblemas: 'Emblemas',
+    global: 'Posición global',
+  }
 };
