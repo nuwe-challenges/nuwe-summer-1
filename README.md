@@ -7,6 +7,41 @@ El repositorio contiene el proyecto para la Summer League de Nuwe. Está hecho e
 
 El proyecto se encuentra hosteado en **Netlify**
 
+## Week #2 ⛱
+
+Para el reto de la semana 2 se pedía introducir los **cromos** de usuario a la aplicación. 
+
+### More about this week's project 🤓
+
+<img src="https://github.com/judithmg/nuwe-summer-1/blob/main/public/images/cromo.png?raw=true"/>
+
+Cuando el usuario clica el botón de `VER NUWE NFT` se abre una ventana modal en la que se puede ver la tarjeta mini y el cromo. La parte frontal del cromo contiene la información básica del usuario, y la trasera, el código QR auto-generado para cada usuario. Si se escanea dicho código, se podrá acceder al cromo del usuario. 
+
+Para generar esta ventana modal se ha utilizado `ReactDOM.createPortal`:
+
+- Normalmente, cuando retornas un elemento del método de render de un componente, este se monta en el DOM como un elemento hijo del nodo padre más cercano. En algunos casos, como en el presente, es más útil insertar un hijo en una ubicación diferente en el DOM. 
+
+```
+{
+  return ReactDOM.createPortal(
+    {children}, 
+    domNode
+  );
+}
+```
+
+- Esto permite que el elemento 'salga' visualmente de su contenedor, y que gracias a las propiedades `z-index` se muestre por encima de todo el contenido de la aplicación. 
+
+
+### Libraries added 📚
+
+Los paquetes que se han introducido esta semana han sido:
+
+- **qrcode.react** para crear el código QR, que redirige a https://nuwe-summer1.netlify.app/{nombre-del-usuario}
+- **react-card-flip** para la animación al girar el cromo, que tiene parte delantera y trasera
+- **react-icons** para añadir el icono del botón de girar el cromo
+- **react-router-dom** para añadir las rutas
+
 
 ## Folder structure 📁
 ```
@@ -48,6 +83,7 @@ sonar.projectKey=my:project
 ```
 
 ## Libraries used 📚
+
 - **`redux`** para gestionar el estado de la app (usuarios por el momento)
 - **`styled-components`** para crear componentes reutilizables
 - **`@nivo/core`** para crear gráficas
@@ -117,4 +153,5 @@ npm start
 Project will run in http://localhost:3000 if available, otherwise check your terminal.
 
 ## Author 👩‍💻
+
 - Judith Martínez (judithmg)
