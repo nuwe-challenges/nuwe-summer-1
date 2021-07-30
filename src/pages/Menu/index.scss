@@ -42,6 +42,8 @@ aside {
 @media (min-width: 600px) {
   aside {
     background-color: transparent;
+    min-width: 230px;
+    border-right: 1px solid $border-color;
   }
   .menu {
     display: block;
