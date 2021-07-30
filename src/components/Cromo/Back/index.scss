@@ -1,0 +1,7 @@
+@import "src/styles/index";
+
+.cromo-back__qr {
+    @include flex(row, center, center);
+    height: 100%;
+    margin: 70px 0;
+}
