@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/index.scss";
+import "./styles/App.scss";
 import NavBar from "./pages/NavBar";
 import Menu from "./pages/Menu";
 import UserProfile from "./pages/UserProfile";

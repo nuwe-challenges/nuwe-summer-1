@@ -1,7 +1,7 @@
 import React from "react";
 import { texts } from "../../../constants";
 import userType from "../../../types/userInterface";
-import RadarChart from "./RadarChart";
+import RadarChart from "../../RadarChart";
 import ValidatedSkill from "./ValidatedSkill";
 import "./index.scss";
 type props = {

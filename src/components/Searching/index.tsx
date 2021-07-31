@@ -12,7 +12,7 @@ const Searching = (): JSX.Element => {
         <section className="searching__container">
             <h2>{texts.searching.title} {user.name}:</h2>
             <div className="searching__main">
-                <p className="searching__where"><img src={icon.Location} alt='' /> {user.location}</p>
+                <p className="searching__where"><img src={icon.Location} alt='' /> {user.location.city}</p>
                 <p className="searching__desc"><img src={icon.BusinessAndTrade} alt='' /> {user.jobDesc}</p>
                 <p className="searching__salary"><img src={icon.Benefit} alt='' /> {user.jobSalary.min} a {user.jobSalary.max} €/a</p>
             </div>

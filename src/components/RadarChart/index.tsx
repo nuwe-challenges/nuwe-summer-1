@@ -1,6 +1,6 @@
 import React from "react";
 import { ResponsiveRadar } from "@nivo/radar";
-import "./RadarChart.scss";
+import "./index.scss";
 
 const commonProperties = {
   width: 200,
@@ -9,6 +9,7 @@ const commonProperties = {
 };
 
 type props = {
+  keys?: string[]
   data: {
     type: string;
     points: number;
@@ -18,13 +19,13 @@ type props = {
   color: string;
 };
 
-const RadarChart = ({ data, max, index, color }: props): JSX.Element => {
+const RadarChart = ({ data, max, index, color, keys = ["points"] }: props): JSX.Element => {
   return (
     <div className="radarchart">
       <ResponsiveRadar
         {...commonProperties}
         data={data}
-        keys={["points"]}
+        keys={keys}
         indexBy={index}
         maxValue={max}
         curve="linearClosed"

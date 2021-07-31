@@ -1,0 +1,56 @@
+@import "src/styles/index";
+
+.cromo__mini {
+    display: none;
+    background-color: $background-dark;
+    animation: float 6s ease-in-out infinite;
+    border: 5px solid;
+    border-image: linear-gradient(to left, #6ab972, #4f934a);
+    border-image-slice: 1;
+    box-shadow: 4px 4px 50px 23px rgba(104, 159, 99, 0.41);
+    width: 220px;
+    padding: 3px;
+    position: relative;
+    &-header {
+        p {
+            margin: 0.5rem 0;
+            &:nth-child(1) {
+                font-weight: 700;
+                font-size: 16px;
+            }
+            &:nth-child(2) {
+                font-weight: 700;
+                font-size: 13px;
+            }
+        }
+    }
+
+    &-body {
+        img:nth-child(1) {
+            width: 200px;
+        }
+        img:nth-child(2) {
+            top: 60px;
+            right: 50px;
+            position: absolute;
+        }
+    }
+    &-number {
+        position: absolute;
+        bottom: -21px;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 100px;
+        font-weight: 800;
+        color: $primary;
+        text-shadow: 2px 0 0 $secondary, -2px 0 0 $secondary, 0 2px 0 $secondary, 0 -2px 0 $secondary,
+            1px 1px $secondary, -1px -1px 0 $secondary, 1px -1px 0 $secondary, -1px 1px 0 $secondary;
+    }
+}
+
+@media (min-width: 600px) {
+    .cromo__mini {
+        display: block;
+    }
+}

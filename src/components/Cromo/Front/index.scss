@@ -1,0 +1,61 @@
+@import "src/styles/index";
+
+.cromo__ {
+    &rank {
+        p {
+            font-size: 13px;
+            font-weight: 600;
+            strong {
+                font-size: 18px;
+            }
+        }
+    }
+    &points {
+        @include flex(row, space-between, flex-start);
+    }
+    &table {
+        margin-right: 20px;
+
+        &-body {
+            font-size: 11px;
+            &--row {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    &global {
+        h3 {
+            margin-bottom: 0;
+        }
+        &-number {
+            margin: 0;
+            font-size: 100px;
+            font-weight: 800;
+            color: $primary;
+            backdrop-filter: blur(100px);
+
+            text-shadow: 2px 0 0 $secondary, -2px 0 0 $secondary, 0 2px 0 $secondary, 0 -2px 0 $secondary,
+                1px 1px $secondary, -1px -1px 0 $secondary, 1px -1px 0 $secondary, -1px 1px 0 $secondary;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .cromo__ {
+        &rank {
+            p {
+                font-size: 16px;
+                strong {
+                    font-size: 24px;
+                }
+            }
+        }
+        &table {
+            margin-right: 20px;
+            &-body {
+                font-size: 14px;
+            }
+        }
+    }
+}

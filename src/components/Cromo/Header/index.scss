@@ -1,0 +1,61 @@
+@import "src/styles/index";
+
+.cromo__ {
+    &header {
+        @include flex(row, flex-start, center);
+        &--left {
+            width: 120px;
+            margin-right: 10px;
+            position: relative;
+            img:nth-child(1) {
+                width: 100px;
+            }
+            img:nth-child(2) {
+                width: 50px;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+            }
+        }
+        &--right {
+            p {
+                &:nth-child(1) {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                &:nth-child(2) {
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+                &:nth-child(3) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .cromo__ {
+        &header {
+            &--left {
+                img:nth-child(1) {
+                    width: 120px;
+                }
+            }
+            &--right {
+                p {
+                    &:nth-child(1) {
+                        font-size: 20px;
+                    }
+                    &:nth-child(2) {
+                        font-size: 16px;
+                    }
+                    &:nth-child(3) {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

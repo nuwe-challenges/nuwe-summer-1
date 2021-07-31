@@ -1,0 +1,1 @@
+export default (url: string, username: string): string => url + username
