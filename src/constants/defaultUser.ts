@@ -9,10 +9,10 @@ export default {
   emblema: emblema,
   userName: 'something',
   openToWork: true,
-  hackathons: 'string',
-  challenges: 'string',
-  proyectoOS: 'string',
-  position: 'Web dev - Especialista',
+  hackathons: 'hackathons',
+  challenges: 'challenges',
+  proyectoOS: 'proyectoOS',
+  position: 'Web dev',
   location: {
     country: 'España',
     city: 'Palafolls, España',
@@ -32,7 +32,7 @@ export default {
   jobWhen: 'Incorporación inmediata',
   stack: ['javascript', 'javascript', 'javascript', 'javascript', 'javascript'],
   rank: {
-    rankName: 'string',
+    rankName: 'Creator',
     global: 10,
     country: 12,
     continent: 100,
