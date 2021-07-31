@@ -14,7 +14,7 @@ const CromoHeader = ({ user }: Props): JSX.Element => (
         </div>
         <div className="cromo__header--right">
             <p>{user.userName}</p>
-            <p>{user.position}|| {user.rank.rankName}</p>
+            <p>{user.position} || {user.rank.rankName}</p>
             <p>{user.openToWork ? 'Abierto a oportunidades' : 'No busca curro'}</p>
         </div>
     </div>
