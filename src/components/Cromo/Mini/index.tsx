@@ -9,7 +9,7 @@ const CromoMini = (): JSX.Element => {
         <div className="cromo__mini">
             <div className="cromo__mini-header">
                 <p>{user.userName}</p>
-                <p>{user.position}|| {user.rank.rankName}</p>
+                <p>{user.position} || {user.rank.rankName}</p>
             </div>
             <div className="cromo__mini-body">
                 <img src={user.avatar} alt="" className="mini-avatar" />
