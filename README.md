@@ -46,9 +46,9 @@ Los paquetes que se han introducido esta semana han sido:
 
 Se han añadido nuevas carpetas al proyecto, tratando siempre de mantener una estructura limpia
 
--`hooks` con el hook `useModal` para la creación de ventanas modales
--`routes` con la ruta principal del proyecto
--`utils` con la función que crea la URL al perfil del usuario
+- `hooks` con el hook `useModal` para la creación de ventanas modales
+- `routes` con la ruta principal del proyecto
+- `utils` con la función que crea la URL al perfil del usuario
 
 
 
