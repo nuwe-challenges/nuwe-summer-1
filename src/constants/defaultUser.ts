@@ -7,7 +7,7 @@ export default {
   phone: '+34 666 666 666',
   avatar: avatar,
   emblema: emblema,
-  userName: 'something',
+  userName: 'kyloRenRox',
   openToWork: true,
   hackathons: 'hackathons',
   challenges: 'challenges',
